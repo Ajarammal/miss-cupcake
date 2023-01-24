@@ -17,46 +17,107 @@
 		<style>
 		
 		.top-nav-header{
-		background-image:url('assets/img/pink background.webp');
-		background-repeat: no-repeat;
-		background-position: fixed;
-		background-size: cover;
-		
+		background-color:#ffccff;
 		}
 		.sec-top{
-		background-image:url('assets/img/yellow background.png');
-		background-repeat: no-repeat;
-		background-position: fixed;
-		background-size: cover;
+		background-color:#ffff99;
 		}
 		.sec1-top{
-		background-color:lightblue;
+		background-color:#ccffdd;
 		}
 		.card-img-top {
          max-height: 200px;
          min-height: 150px;
          object-fit: cover;
          }
-		
-		</style>
-    </head>
+		 #wave {
+           position: relative;
+           height: 100%;
+           width: 100%;
+           background: #e0efe3;
+          }
+         #wave:before {
+          content: "";
+          display: block;
+         position: absolute;
+         border-radius: 100% 50%;
+         width: 100%;
+          height: 100%;
+         background-color: white;
+         right: -5px;
+         top: 40px;
+         }
+        #wave:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 100% 50%;
+        width: 100%;
+        height: 100%;
+        background-color: #e0efe3;
+        left: 0;
+        top: 27px;
+        }
+      .card{
+      background: transparent;
+      border:0px;
+      }
+     #card-footer{
+    	display:flex;
+    	 justify-content: space-between;
+         align-content:center;
+    }
+    #card-footer #qty{
+    	border:1px solid #990099;
+        padding:5px 0px 5px 5px;
+    }
+    #card-footer #qty span{
+        padding:0px 20px;
+    }
+  .cart-button
+  {
+  background-color:#990099;
+  border-color:#990099;
+ }
+ .cart-button:hover
+ {
+ background-color:#990099;
+  border-color:#990099;
+  }
+  .header-image{
+  display:flex;
+  justify-content:center;
+  }
+  body{
+  color:#990099;
+  }
+  .image-space
+  {
+  padding:50px;
+  }
+  .navbar-color{
+  color:#990099 !important;
+  }
+</style>
+   </head>
     <body id="page-top">
+	
         <!-- Navigation-->
 		
 		<div class="container-fluid top-nav-header">
-		<nav class="navbar navbar-expand-lg">
+		 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Shop</a>
+    <a class="navbar-brand navbar-color"" href="#">Shop</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"> <i class="fa fa-shopping-cart"></i></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Our Story</a>
+          <a class="nav-link active navbar-color" aria-current="page" href="#">Our Story</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Why miss cupcake</a>
+          <a class="nav-link navbar-color" href="#">Why miss cupcake</a>
         </li>
      </ul>
  <form class="d-flex" role="search">
@@ -74,10 +135,12 @@
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6">
                      <h1 class="masthead-heading mb-0">Miss <br>cupcake</h1>
+					 <br>
                     <p>We are proud to offer cupcakes and cakes that are freshly baked within hours,if not minutes,for your enjoyment</p>
-                    <button class="btn btn-primary" href="#scroll">Shop Now</button>
+                    <button class="btn btn-primary  cart-button">Shop Now</button>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 header-image">
+					
                     <img src="assets\img\miss cupcake pink.png"  class="img-fluid card-img-left" alt="..." height="500px">
                   </div>
                 </div>
@@ -85,11 +148,16 @@
             </div>
         </header>
       </div>
+	  
 
  <!-- Header-->
- 
+ <div class="sec-top">
+
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffccff" fill-opacity="1" d="M0,192L48,202.7C96,213,192,235,288,224C384,213,480,171,576,176C672,181,768,235,864,240C960,245,1056,203,1152,202.7C1248,203,1344,245,1392,266.7L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+</div>
         <!-- Content section 1-->
         <section class='container-fluid sec-top'>
+		
 <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-4">
@@ -97,108 +165,180 @@
                     </div>
                     <div class="col-lg-6">
                            <h1 class="masthead-heading mb-0">The simple,<br>sweet life</h1>
-                           
+                           <br>
                             <p>Our cupcakes are always made with the finest ingredients, creating a spark that makes your taste buds dance.You'll want to indulge in each and every decadent flavor.</p>
-<button class="btn btn-primary" href="#scroll">Why miss cupcake</button>
+<button class="btn btn-primary cart-button">Why miss cupcake</button>
                     </div>
                 </div>
         </div>
          </section>
 		 
-<div class="container-fluid sec1-top">
+		 
+<div class="sec1-top">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffff99" fill-opacity="1" d="M0,192L48,202.7C96,213,192,235,288,224C384,213,480,171,576,176C672,181,768,235,864,240C960,245,1056,203,1152,202.7C1248,203,1344,245,1392,266.7L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+	
 <section class="container">
 <br>
 <h1> Make your day<br>a little sweeter</h1>
+<br>
+<br>
+<br>
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+  <div class="col-lg-4 d-flex align-items-stretch image-space">
     <div class="card">
-      <img src="assets\img\carrot1 cupcake.webp" class="card-img-top" alt="..." >
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Carrot</h5>
+      <img src="assets/img/carrot1 cupcake.webp" class="card-img-top" alt="..." ><br>
+      <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title">Carrot</h5><br>
         <p class="card-text">This carrot cupcake had Walnut -studded carrot cake with cinnamon cream cheese frosting.</p>
       </div>
-	  <a class="btn btn-primary btn-xl square-pill mt-3" href="#scroll">Add to cart</a>
+	  <div id="card-footer">
+	  <div id="qty">
+	  <span>-</span>5<span>+</span>
+	  </div>
+	  <div>
+	  <button class="btn btn-primary cart-button">Add to cart</button>
+	 	</div>
+	  </div>
     </div>
   </div>
-  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+  
+  <div class="col-lg-4 d-flex align-items-stretch image-space">
     <div class="card">
-      <img src="assets\img\red velvet cupcake.jpg" class="card-img-top" alt="..." >
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Red velvet</h5>
+      <img src="assets\img\red velvet cupcake.jpg" class="card-img-top" alt="..." ><br>
+      <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title">Red velvet</h5><br>
         <p class="card-text">Red velvet cupcake is a striking scarlet color that's velvety and soft, with a hint of vanilla anad chocolate flavour.</p>
       </div>
-	  <a class="btn btn-primary btn-xl square-pill mt-3" href="#scroll">Add to cart</a>
+	  <div id="card-footer">
+        <div id="qty">
+<span>-</span>3<span>+</span>
+        </div>
+        <div >
+        <button class="btn btn-primary cart-button">Add to cart</button>
+        </div>
+	  
+	  </div>
     </div>
-  </div>
-  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+    </div>
+<div class="col-lg-4 d-flex align-items-stretch image-space">
     <div class="card">
-      <img src="assets\img\mintchip cupcake.jpg" class="card-img-top" alt="...">
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Mint chip</h5>
+      <img src="assets\img\mintchip cupcake.jpg" class="card-img-top" alt="..."><br>
+      <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title">Mint chip</h5><br>
         <p class="card-text">These mint chip cupcakes are made with a moist chocolate cupcake ,mint frosting and mini chocolate chips! A classic flavour combination in cupcake form!.</p>
       </div>
-	  <a class="btn btn-primary btn-xl square-pill mt-3" href="#scroll">Add to cart</a>
+	  <div id="card-footer">
+	  <div id="qty">
+	  <span>-</span>2<span>+</span>
+	  </div>
+	  <div>
+	   <button class="btn btn-primary cart-button">Add to cart</button>
+	 </div> 
+	 </div>
     </div>
   </div>
-  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+  
+  <div class="col-lg-4 d-flex align-items-stretch image-space">
     <div class="card">
-      <img src="assets\img\pink strawberry cupcake.webp" class="card-img-top" alt="...">
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Pink strawberry</h5>
+      <img src="assets\img\pink strawberry.png" class="card-img-top" alt="..."><br>
+      <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title">Pink strawberry</h5><br>
         <p class="card-text">Pink strawberry cupcakes are fluffy,moist and made from scratch with strawberry jam for a nice fruit flavour.</p>
       </div>
-	  <a class="btn btn-primary btn-xl square-pill mt-3" href="#scroll">Add to cart</a>
+	 <div id="card-footer">
+	  <div id="qty">
+	  <span>-</span>0<span>+</span>
+	  </div>
+	  <div>
+	  <button class="btn btn-primary cart-button">Add to cart</button>
+	  </div>
+	  </div>
     </div>
   </div>
-  <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+  <div class="col-lg-4 d-flex align-items-stretch image-space">
     <div class="card">
-      <img src="assets\img\marshmallow1 cupcake.jpg" class="card-img-top" alt="...">
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Marashmallow</h5>
+      <img src="assets\img\marshmallow1 cupcake.jpg" class="card-img-top" alt="..."><br>
+      <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title">Marashmallow</h5><br>
         <p class="card-text">Marshmallow cupcakes are simple and sweet.This tasty treat is perfect for getting kids involved in baking.</p>
       </div>
-	  <a class="btn btn-primary btn-xl square-pill mt-3" href="#scroll">Add to cart</a>
+	 <div id="card-footer">
+	  <div id="qty">
+	  <span>-</span>0<span>+</span>
+	  </div>
+	  <div>
+	  <button class="btn btn-primary cart-button">Add to cart</button>
+	  </div>
+	  </div>
     </div>
   </div>
-    <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+    <div class="col-lg-4 d-flex align-items-stretch image-space">
     <div class="card">
-      <img src="assets\img\darkchocolate cupcake.webp" class="card-img-top" alt="...">
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Dark chocolate</h5>
+      <img src="assets/img/darkchocolate cupcake.webp" class="card-img-top" alt="..."><br>
+      <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title">Dark chocolate</h5><br>
         <p class="card-text">These dark chocolate cupcakes feature intensely flavoured sponge-like chocolate cupcakes,a silky peanut butter frosting, and a delightful Rees's pieces crunch on top.</p>
       </div>
-	  <a class="btn btn-primary btn-xl square-pill mt-3" href="#scroll">Add to cart</a>
+	  <div id="card-footer">
+	  <div id="qty">
+	  <span>-</span>0<span>+</span>
+	  </div>
+	  <div>
+	  <button class="btn btn-primary cart-button">Add to cart</button>
+	  </div>
+	  </div>
     </div>
   </div>
-      <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+      <div class="col-lg-4 d-flex align-items-stretch image-space">
     <div class="card">
-      <img src="assets\img\salty caramel cupcake.jpg" class="card-img-top" alt="...">
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Salty caramel</h5>
+      <img src="assets\img\salty caramel cupcake.jpg" class="card-img-top" alt="..."><br>
+      <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title">Salty caramel</h5><br>
         <p class="card-text">Fluffy brown sugar cupcake stuffed with arich pocket of salted caramel sauce then topped with homemade salted caramel frosting.</p>
       </div>
-	  <a class="btn btn-primary btn-xl square-pill mt-3" href="#scroll">Add to cart</a>
+	<div id="card-footer">
+	  <div id="qty">
+	  <span>-</span>0<span>+</span>
+	  </div>
+	  <div>
+	  <button class="btn btn-primary cart-button">Add to cart</button>
+	  </div>
+	  </div>
     </div>
   </div>
-      <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+      <div class="col-lg-4 d-flex align-items-stretch image-space">
     <div class="card">
-      <img src="assets\img\glutenfree cupcake.webp" class="card-img-top" alt="...">
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Gluten free velvet</h5>
+      <img src="assets\img\glutenfree cupcake.png" class="card-img-top" alt="..."><br>
+      <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title">Gluten free velvet</h5><br>
         <p class="card-text">These gluten free red velvet cupcakes are light,fluffy, and fool-proof!Thanks to the combination of sour cream,oil,and whipped batter.</p>
       </div>
-	  <a class="btn btn-primary btn-xl square-pill mt-3" href="#scroll">Add to cart</a>
+	 <div id="card-footer">
+	  <div id="qty">
+	  <span>-</span>0<span>+</span>
+	  </div>
+	  <div>
+	  <button class="btn btn-primary cart-button">Add to cart</button>
+	  </div>
+	  </div>
     </div>
   </div>
     
-	<div class="col-lg-4 mb-3 d-flex align-items-stretch">
+	<div class="col-lg-4 d-flex align-items-stretch image-space">
     <div class="card">
-      <img src="assets\img\cinnamon cupcake.jpeg" class="card-img-top" alt="...">
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">Cinnamon</h5>
+      <img src="assets\img\cinnamon cupcake.jpeg" class="card-img-top" alt="..."><br>
+      <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title">Cinnamon</h5><br>
         <p class="card-text">Creamy,sweet cinnamon frosting and tender,warming cinnamon sponges make these cinnamon cupcakes a seriously comforting treat.</p>
       </div>
-	  <a class="btn btn-primary btn-xl square-pill mt-3" href="#scroll">Add to cart</a>
+	  <div id="card-footer">
+	  <div id="qty">
+	  <span>-</span>0<span>+</span>
+	  </div>
+	  <div>
+	  <button class="btn btn-primary cart-button">Add to cart</button>
+	  </div>
+	  </div>
     </div>
 	</div>
 </section>
